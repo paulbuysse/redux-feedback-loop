@@ -22,7 +22,7 @@ class Feelings extends Component {
 
                 <h1>How are you feeling today?</h1>
 
-                <input placeholder="Answer" onChange={(event) => this.setState({ feelings: event.target.value })} />
+                <input placeholder="Answer" type="number" onChange={(event) => this.setState({ feelings: event.target.value })} />
             
                 <button onClick={this.handleSubmit}>Next</button>
 

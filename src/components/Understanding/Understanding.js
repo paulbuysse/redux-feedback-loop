@@ -21,7 +21,7 @@ class Understanding extends Component {
 
                 <h1>How well are you understanding the content?</h1>
 
-                <input placeholder="Answer" onChange={(event) => this.setState({ understanding: event.target.value })} />
+                <input placeholder="Answer" type="number" onChange={(event) => this.setState({ understanding: event.target.value })} />
 
                 <button onClick={this.handleSubmit}>Next</button>
 

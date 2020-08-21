@@ -21,7 +21,7 @@ class Support extends Component {
 
             <h1>How well are you being supported?</h1>
 
-            <input placeholder="Answer" onChange={(event) => this.setState({ support: event.target.value })} />
+            <input placeholder="Answer" type="number" onChange={(event) => this.setState({ support: event.target.value })} />
 
             <button onClick={this.handleSubmit}>Next</button>
 
