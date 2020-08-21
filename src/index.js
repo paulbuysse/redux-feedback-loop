@@ -23,7 +23,8 @@ const understandingReducer = (state = '', action) => {
 
 const reduxStore = createStore(
     combineReducers({
-        feelingsReducer
+        feelingsReducer,
+        understandingReducer
     }),
     applyMiddleware(logger)
 )
