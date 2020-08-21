@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 import Comments from '../Comments/Comments.js';
 import Feelings from '../Feelings/Feelings.js';
@@ -10,8 +10,10 @@ import Review from '../Review/Review.js';
 import Submitted from '../Submitted/Submitted.js';
 import Support from '../Support/Support.js';
 import Understanding from '../Understanding/Understanding.js';
+import Homepage from '../Homepage/Homepage.js';
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
@@ -21,14 +23,8 @@ class App extends Component {
         </header>
 
         <Router>
-          <Link to="/feelings">go to feelings</Link>
-
-          {/* <Comments />
-      <Feelings />
-      <Review />
-      <Submitted />
-      <Support />
-      <Understanding /> */}
+          <Link to="/feelings">Click here!</Link>
+          {/* <Homepage /> */}
 
           <Route exact path="/feelings" component={Feelings} />
           <Route exact path="/understanding" component={Understanding} />

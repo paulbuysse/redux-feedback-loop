@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class Submitted extends Component {
+class Homepage extends Component {
 
-    returnToFeelings = () => {
+    startForm = () => {
         this.props.history.push('/feelings')
     }
 
     render() {
         return (
             <div>
-                <h1>Thank you for the feedback!</h1>
-                <h3>We will review it shortly.</h3>
+                <h1>Please give us feedback!</h1>
+                <h3>Click the link below to begin.</h3>
 
-                <button onClick={this.returnToFeelings}>Back to start</button>
+                <button onClick={this.startForm}>Start</button>
             </div>
         )
     }
@@ -25,4 +25,4 @@ const mapStoreToProps = (reduxState) => {
     }
 }
 
-export default connect(mapStoreToProps)(Submitted);
+export default connect(mapStoreToProps)(Homepage);

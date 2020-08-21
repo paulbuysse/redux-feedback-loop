@@ -8,11 +8,15 @@ class Feelings extends Component {
     }
 
     handleSubmit = () => {
-        this.props.dispatch(
-            { type: 'FEELINGS_SUBMIT', payload: this.state.feelings }
-        );
+        if (this.state.feelings !== '') {
+            this.props.dispatch(
+                { type: 'FEELINGS_SUBMIT', payload: this.state.feelings }
+            );
 
-        this.props.history.push('/understanding')
+            this.props.history.push('/understanding')
+        } else {
+            alert('Please fill out the form!')
+        }   
     }
 
     render() {

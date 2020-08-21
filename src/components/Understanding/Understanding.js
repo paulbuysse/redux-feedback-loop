@@ -8,11 +8,15 @@ class Understanding extends Component {
     }
 
     handleSubmit = () => {
-        this.props.dispatch(
-            { type: 'UNDERSTANDING_SUBMIT', payload: this.state.understanding }
-        );
+        if (this.state.understanding !== '') {
+            this.props.dispatch(
+                { type: 'UNDERSTANDING_SUBMIT', payload: this.state.understanding }
+            );
 
-        this.props.history.push('/support')
+            this.props.history.push('/support')
+        } else {
+            alert('Please fill out the form!')
+        }
     }
 
     render() {
