@@ -5,7 +5,15 @@ class Understanding extends Component {
 
     render() {
         return (
-            <p>understanding linked</p>
+            <div>
+
+            <h1>How are you feeling today?</h1>
+
+            <input placeholder="Answer" onChange={(event) => this.setState({ feelings: event.target.value })} />
+        
+            <button onClick={this.handleSubmit}>Next</button>
+
+        </div>
         )
     }
 }
