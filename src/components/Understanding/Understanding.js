@@ -12,7 +12,7 @@ class Understanding extends Component {
             { type: 'UNDERSTANDING_SUBMIT', payload: this.state.understanding }
         );
 
-        // this.props.history.push('/understanding')
+        this.props.history.push('/support')
     }
 
     render() {

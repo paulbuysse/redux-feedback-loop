@@ -21,10 +21,18 @@ const understandingReducer = (state = '', action) => {
     return state
 }
 
+const supportReducer = (state = '', action) => {
+    if (action.type === 'SUPPORT_SUBMIT') {
+        return action.payload
+    }
+    return state
+}
+
 const reduxStore = createStore(
     combineReducers({
         feelingsReducer,
-        understandingReducer
+        understandingReducer,
+        supportReducer
     }),
     applyMiddleware(logger)
 )
