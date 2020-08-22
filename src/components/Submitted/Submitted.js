@@ -3,10 +3,12 @@ import { connect } from 'react-redux';
 
 class Submitted extends Component {
 
+    //brings the user bck to the beginning
     returnToFeelings = () => {
         this.props.history.push('/feelings')
     }
 
+    //displays thank you message
     render() {
         return (
             <div>

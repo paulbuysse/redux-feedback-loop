@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool');
 
+//submit POST request
 router.post('/', (req, res) => {
     let newFeedback = req.body;
     let queryText = `

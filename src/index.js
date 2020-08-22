@@ -7,6 +7,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
+//stores data about feelings
 const feelingsReducer = (state = '', action) => {
     if (action.type === 'FEELINGS_SUBMIT') {
         return action.payload
@@ -14,6 +15,7 @@ const feelingsReducer = (state = '', action) => {
     return state
 }
 
+//stores data about understanding
 const understandingReducer = (state = '', action) => {
     if (action.type === 'UNDERSTANDING_SUBMIT') {
         return action.payload
@@ -21,6 +23,7 @@ const understandingReducer = (state = '', action) => {
     return state
 }
 
+//stores data about support
 const supportReducer = (state = '', action) => {
     if (action.type === 'SUPPORT_SUBMIT') {
         return action.payload
@@ -28,6 +31,7 @@ const supportReducer = (state = '', action) => {
     return state
 }
 
+//stores user comments
 const commentsReducer = (state = '', action) => {
     if (action.type === 'COMMENTS_SUBMIT') {
         return action.payload

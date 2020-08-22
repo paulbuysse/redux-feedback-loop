@@ -3,10 +3,12 @@ import { connect } from 'react-redux';
 
 class Understanding extends Component {
 
+    //beginning state is empty
     state = {
         understanding: ''
     }
 
+    //dispatches the changed state to understandingReducer
     handleSubmit = () => {
         if (this.state.understanding !== '') {
             this.props.dispatch(
@@ -19,7 +21,13 @@ class Understanding extends Component {
         }
     }
 
+    //back to feelings
+    handleBack = () => {
+        this.props.history.push('/feelings')
+    }
+
     render() {
+        //user inputs
         return (
             <div>
 
@@ -27,6 +35,9 @@ class Understanding extends Component {
 
                 <input placeholder="Answer" type="number" onChange={(event) => this.setState({ understanding: event.target.value })} />
 
+                <br />
+
+                <button onClick={this.handleBack}>Back</button>
                 <button onClick={this.handleSubmit}>Next</button>
 
             </div>

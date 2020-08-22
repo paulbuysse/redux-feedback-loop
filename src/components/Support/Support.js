@@ -3,10 +3,12 @@ import { connect } from 'react-redux';
 
 class Support extends Component {
 
+    //local support state
     state = {
         support: ''
     }
 
+    //sends local state to support reducer
     handleSubmit = () => {
         if (this.state.support !== '') {
             this.props.dispatch(
@@ -19,6 +21,12 @@ class Support extends Component {
         }
     }
 
+    //back to understanding
+    handleBack = () => {
+        this.props.history.push('/understanding')
+    }
+
+    //user inputs
     render() {
         return (
             <div>
@@ -27,6 +35,9 @@ class Support extends Component {
 
                 <input placeholder="Answer" type="number" onChange={(event) => this.setState({ support: event.target.value })} />
 
+                <br />
+
+                <button onClick={this.handleBack}>Back</button>
                 <button onClick={this.handleSubmit}>Next</button>
 
             </div>
