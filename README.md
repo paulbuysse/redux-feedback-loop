@@ -1,9 +1,14 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# Redux Feedback Loop
 
 ## Description
+This app takes in answers to a survey about how you are
+feeling, understanding, and supported from the day's lesson.
+To begin, click the start link. Enter a number reflecting how
+you feel about the questions, and add a comment if you want 
+at the end.
 
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+All answers are immediately stored in Redux, and when submitted
+are sent to the database and stored there forever. You must 
+enter a number for each question, but the comment input may
+be left blank. If you want to change an answer before submitting
+it, you can go back by clicking the `Back` button.
